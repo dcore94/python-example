@@ -4,6 +4,6 @@ import configparser;
 conf = configparser.ConfigParser()
 conf.read("config.cfg")
 
-t = Template("Hello {{ who }}!")
+t = Template("Ciao {{ who }}!")
 s = t.render(who=conf["default"]["name"])
 print(s)
