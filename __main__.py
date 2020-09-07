@@ -7,4 +7,3 @@ conf.read("config.cfg")
 t = Template("Hello {{ who }}!")
 s = t.render(who=conf["default"]["name"])
 print(s)
-return s
