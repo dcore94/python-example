@@ -16,6 +16,9 @@ f.write("<text>" + s + "</text>")
 f = open("file.json", "w")
 f.write('{ "text" : "' + s + '"}')
 
+f = open("file.csv", "w")
+f.writelines(["row,content\n","1,"+s])
+
 print(s)
 
 
