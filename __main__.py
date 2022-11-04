@@ -1,5 +1,6 @@
 from jinja2 import Template;
 import configparser;
+import os;
 
 conf = configparser.ConfigParser()
 conf.read("config.cfg")
@@ -19,6 +20,8 @@ f.write('{ "text" : "' + s + '"}')
 f = open("file.csv", "w")
 f.writelines(["row,content\n","1,"+s])
 
+d = os.mkdir("testdir")
+f = open("testdir/file.csv", "w")
+f.writelines(["row,content\n","1,"+s])
+
 print(s)
-
-
