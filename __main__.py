@@ -10,6 +10,9 @@ s = t.render(who=conf["default"]["name"])
 
 f = open("file.txt", "a")
 f.write(s + "\n")
+for k in os.environ: 
+	if k.startswith("ccp"):
+		f.write("%s = %s\n" % (k,os.environ[k])) 
 
 f = open("file.xml", "w")
 f.write("<text>" + s + "</text>")
